@@ -3,9 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mateusz Smykowski">
+    <meta name="description" content="">
+    <meta name="keywords" content="Programista front-end, tworzenie stron internetowych, tworzenie stron www, HTML5, CSS3, Sass, Less, Responsive Web Design, Bootstrap, Git, Grunt, JavaScript, jQuery, Ajax">
     <title>Mateusz Smykowski - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>TEST</h1>
+    <header class="page-header"><!-- PAGE HEADER START -->
+        <nav>
+            <input id="navIcon" class="navIcon" type="checkbox" hidden>
+            <label for="navIcon"><i class="fa fa-bars" aria-hidden="true"></i></label>
+            <div class="top-nav container">
+                <a class="logo" href="index.html" data-logo1="MS" data-logo2="Mateusz Smykowski"></a>
+                <ul class="menu">
+                    <li><a href="#about">O mnie</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="hero container">
+            <div class="heading-group">
+                <h1>Mateusz <strong>Smykowski</strong></h1>
+                <h3 class="hero-less-heading">Junior front-end developer</h3>
+            </div>
+            <div class="mouse"></div>
+        </div>
+    </header><!-- PAGE HEADER END -->
+    <main><!-- MAIN PAGE CONTENT START -->
+        <section id="about" class="about"><!-- ABOUT SECTION START -->
+            <div class="container">
+                <h2>O mnie</h2>
+                <p>Jestem początkującym programistą front-endu. Lubię tworzyć funkcjonalne i estetyczne strony oraz aplikacje internetowe. Stale rozwijam swoje umiejętności programistyczne, by być coraz lepszym. Poniżej prezentuje technologie, które do tej pory poznałem i wykorzystuje w swoich projektach. W sekcji <a class="link" href="#portfolio"><b>portfolio</b></a> przedstawiam zrealizowane przeze mnie przykładowe prace. Po więcej przykładów odsyłam na moje repozytorium na <a class="link" href="https://github.com/mateusz-s" target="_blank"><b>GitHubie</b></a>. Zapraszam do <a class="link" href="#contact"><b>kontaktu</b></a> :&#41;</p>   
+                <h3 class="about-less-heading">Moje umiejętności</h3>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skills">
+                            <i class="devicon-html5-plain-wordmark" title="HTML5"></i>
+                            <p>Tworzenie struktury strony www z wykorzystaniem znaczników semantycznych, cięcie szablonów z .PSD do HTML</p>
+                        </div>  
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skills">
+                            <i class="devicon-css3-plain-wordmark" title="CSS3"></i>
+                            <p>Znajomość <strong>RWD</strong> (tworzenie responsywnych stron www w oparciu o Grid i Media Queries), znajomość <strong>Flexbox</strong>, preprocesora <strong>Sass</strong> i <strong>Less</strong></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skills">
+                            <i class="devicon-bootstrap-plain" title="Twitter Bootstrap"></i>
+                            <p>Praktyczne wykorzystanie i modyfikacje komponentów CSS i JS frameworka dla potrzeb danego projektu</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skills">
+                            <i class="devicon-javascript-plain" title="JavaScript"></i>
+                            <p>Znajomość umożliwiająca pisanie prostych skryptów, korzystanie z wbudowanych funkcjonalności biblioteki <strong>jQuery</strong>, tworzenie aplikacji z wykorzystaniem <strong>Ajax</strong></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skills">
+                            <i class="fa fa-wrench" aria-hidden="true" title="Narzędzia"></i>
+                            <p>Umiejętność posługiwania się systemem kontroli wersji <strong>Git</strong>, znajomość narzędzia <strong>Grunt</strong> do automatyzacji powtarzalnych zadań</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skills">
+                            <i class="devicon-photoshop-line" title="Adobe Photoshop"></i>
+                            <p>Podstawowa znajomość na potrzeby cięcia layoutów .PSD i optymalizacji grafiki</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- ABOUT SECTION END -->
+        <section id="portfolio" class="portfolio"><!-- PORTFOLIO SECTION START -->
+            <div class="container">
+                <h2>Portfolio</h2>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="portfolio-item">
+                            <div class="portfolio-img img-1">
+                                <div class="layer">
+                                    <p>HTML5, CSS3, RWD, Sass</p>
+                                </div>
+                            </div>
+                            <h3>Take</h3>
+                            <p class="portfolio-description">Szablon strony www zakodowany na podstawie projektu graficznego .PSD</p>
+                            <a class="btn-square" href="https://mateusz-s.github.io/Picture_Perfect-webpage/" target="_blank" title="Podgląd"><i class="fa fa-search" aria-hidden="true"></i></a>
+                            <a class="btn-square" href="https://github.com/mateusz-s/Picture_Perfect-webpage" target="_blank" title="Przegląd kodu"><i class="fa fa-code" aria-hidden="true"></i></a>
+                            <a class="btn-square" href="https://drive.google.com/file/d/0B0kDmQE59vr0V25Vb1FLSUZIWjg/view" target="_blank" title="Pobierz szablon .PSD"><i class="fa fa-file-o" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="portfolio-item">
+                            <div class="portfolio-img img-2">
+                                <div class="layer">
+                                    <p>HTML5, CSS3, Sass, Bootstrap, JavaScript</p>
+                                </div>
+                            </div>
+                            <h3>ActiveBox</h3>
+                            <p class="portfolio-description">Szablon strony www zakodowany na podstawie projektu graficznego .PSD</p>
+                            <a class="btn-square" href="https://mateusz-s.github.io/ActiveBox-webpage/" target="_blank" title="Podgląd"><i class="fa fa-search" aria-hidden="true"></i></a>
+                            <a class="btn-square" href="https://github.com/mateusz-s/ActiveBox-webpage" target="_blank" title="Przegląd kodu"><i class="fa fa-code" aria-hidden="true"></i></a>
+                            <a class="btn-square" href="https://drive.google.com/file/d/0B0kDmQE59vr0U1J1MmNUTDlxRUU/view" target="_blank" title="Pobierz szablon .PSD"><i class="fa fa-file-o" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="portfolio-item">
+                            <div class="portfolio-img img-3">
+                                <div class="layer">
+                                    <p>HTML5, CSS3, RWD, Sass, JavaScript</p>
+                                </div>
+                            </div>
+                            <h3>Elipsis</h3>
+                            <p class="portfolio-description">Szablon strony www zakodowany na podstawie projektu graficznego .PSD</p>
+                            <a class="btn-square" href="https://mateusz-s.github.io/Design_Lab-webpage/" target="_blank" title="Podgląd"><i class="fa fa-search" aria-hidden="true"></i></a>
+                            <a class="btn-square" href="https://github.com/mateusz-s/Design_Lab-webpage" target="_blank" title="Przegląd kodu"><i class="fa fa-code" aria-hidden="true"></i></a>
+                            <a class="btn-square" href="https://drive.google.com/file/d/0B0kDmQE59vr0X00xZWNHVVY3OGM/view" target="_blank" title="Pobierz szablon .PSD"><i class="fa fa-file-o" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="portfolio-item">
+                            <div class="portfolio-img img-4">
+                                <div class="layer">
+                                    <p>HTML5, CSS3, JavaScript</p>
+                                </div>
+                            </div>
+                            <h3>Random quote machine</h3>
+                            <p class="portfolio-description">Aplikacja losująca cytaty z możliwością wrzucania pobranego cytatu na Twittera.</p>
+                            <a class="btn-square" href="https://mateusz-s.github.io/random_quote_machine-js/" target="_blank" title="Podgląd"><i class="fa fa-search" aria-hidden="true"></i></a>
+                            <a class="btn-square" href="https://github.com/mateusz-s/random_quote_machine-js" target="_blank" title="Przegląd kodu"><i class="fa fa-code" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="portfolio-item">
+                            <div class="portfolio-img img-5">
+                                <div class="layer">
+                                    <p>HTML5, CSS3, JavaScript</p>
+                                </div>
+                            </div>
+                            <h3>Country browser</h3>
+                            <p class="portfolio-description">Wyszukiwarka krajów, która znajduje kraje zawierające w nazwie wpisaną frazę.</p>
+                            <a class="btn-square" href="https://mateusz-s.github.io/country_browser-js/" target="_blank" title="Podgląd"><i class="fa fa-search" aria-hidden="true"></i></a>
+                            <a class="btn-square" href="https://github.com/mateusz-s/country_browser-js" target="_blank" title="Przegląd kodu"><i class="fa fa-code" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="portfolio-item">
+                            <div class="portfolio-img img-6">
+                                <div class="layer">
+                                    <p>HTML5, CSS3, RWD, Sass, JavaScript</p>
+                                </div>
+                            </div>
+                            <h3>Tablica Kanban</h3>
+                            <p class="portfolio-description">Aplikacja do zarządzania projektami wykorzystująca tablicę kanban.</p>
+                            <a class="btn-square" href="https://mateusz-s.github.io/kanban_board-js/" target="_blank" title="Podgląd"><i class="fa fa-search" aria-hidden="true"></i></a>
+                            <a class="btn-square" href="https://github.com/mateusz-s/kanban_board-js" target="_blank" title="Przegląd kodu"><i class="fa fa-code" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-more">
+                    <p class="portfolio-more-paragraph">Zobacz więcej</p>
+                    <a class="btn" href="https://github.com/mateusz-s" target="_blank" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i>GitHub</a>
+                </div>
+            </div>
+        </section><!-- PORTFOLIO SECTION END -->
+        <section id="contact" class="contact"><!-- CONTACT SECTION START -->
+            <div class="container">
+                <h2>Kontakt</h2>
+                <div class="row">
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="contact-email">
+                            <h3>Napisz do mnie...</h3>
+                            <a href="mailto:msmykowski@interia.pl"><i class="fa fa-envelope" aria-hidden="true"></i><span class="link">msmykowski@interia.pl</span></a>
+                        </div>  
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="contact-phone">
+                            <h3>...lub zadzwoń</h3>
+                            
+                            <a href="tel:+48889512172"><i class="fa fa-phone" aria-hidden="true"></i><span class="link">+48 889 512 172</span></a>
+                        </div>     
+                    </div>
+                    <div class="col-sm-12 col-lg-4">
+                        <div class="contact-media_icons">
+                            <a class="btn-square" href="https://github.com/mateusz-s" target="_blank" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
+                            <a class="btn-square" href="https://www.linkedin.com/in/mateusz-smykowski/" target="_blank" title="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            <a class="btn-square" href="#" target="_blank" title="Pobierz CV">CV</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- CONTACT SECTION END -->
+    </main><!-- MAIN PAGE CONTENT END -->
+    <footer class="copyright"><!-- PAGE FOOTER START -->
+        <p>Copyright 2017 <span class="visible-inline-block">&copy; <a class="link" href="https://github.com/mateusz-s/mateusz-s.github.io" target="_blank">Mateusz Smykowski</a></span></p> 
+    </footer><!-- PAGE FOOTER END -->
+    
+    <!-- SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/smooth-scrolling.js"></script>
+    <script src="js/nav.js"></script>
 </body>
 </html>
