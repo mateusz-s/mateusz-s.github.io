@@ -40,7 +40,8 @@ $hover-color: #468FCD;
 $hero-height: 100vh;
 $works-number: 6;
 $scroller-margin-top: 8px;
-$text-lines: 4;
+$text-lines-1: 4;
+$text-lines-2: 3;
 $contact-item-margin-bottom: 60px;
 
 //Mixins
@@ -379,7 +380,7 @@ label[for="navIcon"] {
         margin-bottom: 50px;
         text-align: center;
         @media screen and (min-width: $break-lg) {
-            min-height: 90px + $text-lines * 27px;
+            min-height: 90px + 27px * $text-lines-1;
         }
         @media screen and (min-width: $break-xl) {
             min-height: initial;
@@ -442,6 +443,12 @@ label[for="navIcon"] {
     }
     &-description {
         padding: 0 15px;
+        @media screen and (min-width: $break-md) {
+            height: 27px * $text-lines-2;
+        }
+        @media screen and (min-width: $break-xl) {
+            height: auto;
+        }
     }
     &-more {
         text-align: center;
