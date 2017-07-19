@@ -63,6 +63,11 @@ $contact-item-margin-bottom: 60px;
     box-sizing: border-box;
 }
 
+::selection {
+    color: $text-color-white;
+    background-color: $bg-color-blue;
+}
+
 html {
     font-size: 50%;
     @media screen and (min-width: $break-sm) {
