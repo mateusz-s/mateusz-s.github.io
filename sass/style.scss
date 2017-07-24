@@ -180,28 +180,48 @@ strong, b {
     }
 }
 
+.visible-block {
+    display: block;
+}
+
 .visible-inline-block {
     display: inline-block;
 }
 
-.navIcon:checked ~ .top-nav {
-    height: 300px;
-    .menu {
-        display: block;
-    }
-}
-
-label[for="navIcon"] {
-    position: fixed;
-    top: 19px;
-    right: 30px;
+.nav-icon {
+    position: absolute;
+    top: 18.5px;
+    right: 25px;
+    display: inline-block;
     cursor: pointer;
     @media screen and (min-width: $break-md) {
         display: none;
     }
-    i.fa {
-        font-size: 40px;
-        color: $text-color-blue;
+    span {
+        display: block;
+        width: 35px;
+        height: 5px;
+        margin: 6px 0;
+        background-color: $bg-color-blue;
+        transition: all .3s;
+        &:first-child {
+            margin-top: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.change-nav-icon span {
+    &:first-child {
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+    &:nth-child(2) {
+        opacity: 0;
+    }
+    &:last-child {
+        transform: rotate(45deg) translate(-8px, -8px);
     }
 }
 
@@ -254,11 +274,12 @@ label[for="navIcon"] {
         transition: background-color .3s ease-in-out;
     }
     .top-nav {
+		position: relative;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        padding: 15px;
+        padding: 10px 0;
         text-transform: uppercase;
         @media screen and (min-width: $break-md) {
             flex-direction: row;
@@ -294,6 +315,7 @@ label[for="navIcon"] {
     }
     .menu {
         display: none;
+        align-self: stretch;
         @media screen and (min-width: $break-md) {
             display: block;
         }
@@ -538,6 +560,19 @@ label[for="navIcon"] {
 }
 
 /* === MEDIA QUERIES === */
+@media screen and (max-width: $break-md - 1) {
+    .change-nav {
+        background-color: $bg-color-black-transparent;
+        .top-nav .menu {
+			display: block;
+			margin-top: 50px;
+			a {
+				color: $text-color-white;
+			}
+		}  
+	}
+}
+
 @media screen and (min-width: $break-sm) {
     @include grid-system(sm);
 }
