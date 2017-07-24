@@ -3,7 +3,7 @@ var sass = require('gulp-sass');
 var watch = require('gulp-watch');
 var browserSync = require('browser-sync').create();
 
-gulp.task('browser-sync', ['sass'], function() {
+gulp.task('browser-sync', ['sass'], function () {
     browserSync.init({
         server: {
             baseDir: "./"
