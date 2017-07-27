@@ -1,7 +1,8 @@
 var navBar = $('.page-header nav'),
     navIcon = $('.nav-icon'),
     navLink = $('.menu a'),
-    posY = 100;
+    posY = 70,
+	breakPointMD = 768;
 
 $(window).scroll(function () {
     var posW = $(window).scrollTop();
@@ -16,15 +17,18 @@ $(window).scroll(function () {
 });
 
 $(window).resize(function () {
-	if ($(window).width() >= 768) {
+	if (window.innerWidth >= breakPointMD) {
 		navBar.removeClass('change-nav');
 		navIcon.removeClass('change-nav-icon');
 	}
 });
 
 $('.menu, .nav-icon').click(function () {
-	if ($(window).width() < 768) {
+	if (window.innerWidth < breakPointMD) {
 		navBar.toggleClass('change-nav');
 		navIcon.toggleClass('change-nav-icon');
 	}
 });
+
+// $(window).width() - browser window width
+// window.innerWidth - viewport width
