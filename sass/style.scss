@@ -43,6 +43,8 @@ $scroller-margin-top: 8px;
 $text-lines-1: 4;
 $text-lines-2: 3;
 $contact-item-margin-bottom: 60px;
+$tooltip-position: 120%;
+$tooltip-arrow-width: 10px;
 
 //Mixins
 @mixin grid-system($size) {
@@ -223,6 +225,52 @@ strong, b {
     &:last-child {
         transform: rotate(45deg) translate(-8px, -8px);
     }
+}
+
+.change-nav {
+	background-color: $bg-color-black-transparent;
+	.top-nav .menu {
+		display: block;
+		margin-top: 50px;
+		a {
+			color: $text-color-white;
+		}
+	}  
+}
+
+.tooltip {
+	position: relative;
+	display: inline-block;
+	&::before, 
+	&::after {
+		position: absolute;
+		top: 50%;
+		transform: translate(0,-50%);
+		opacity: 0;
+		transition: opacity .3s;
+	}
+	&::before {
+		content: '';
+		left: $tooltip-position;
+		border: $tooltip-arrow-width solid transparent;
+		border-left: none;
+		border-right-color: $bg-color-black-transparent;
+	}
+	&::after {
+		content: attr(data-tooltip);
+		left: calc(#{$tooltip-position} + #{$tooltip-arrow-width});
+		padding: 10px;
+		font-size: 14px;
+		text-align: center;
+		color: $text-color-white;
+		background-color: $bg-color-black-transparent;
+	}
+	@media screen and (min-width: $break-lg) {
+		&:hover::before,
+		&:hover::after {
+			opacity: 1;
+		}
+	}
 }
 
 /* === GRID SYSTEM STYLES === */
@@ -560,19 +608,6 @@ strong, b {
 }
 
 /* === MEDIA QUERIES === */
-@media screen and (max-width: $break-md - 1) {
-    .change-nav {
-        background-color: $bg-color-black-transparent;
-        .top-nav .menu {
-			display: block;
-			margin-top: 50px;
-			a {
-				color: $text-color-white;
-			}
-		}  
-	}
-}
-
 @media screen and (min-width: $break-sm) {
     @include grid-system(sm);
 }
