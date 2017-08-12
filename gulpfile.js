@@ -13,7 +13,7 @@ gulp.task('browser-sync', ['sass'], function () {
 
 gulp.task('sass', function () {
     return gulp.src('sass/*.scss')
-                .pipe(sass({outputStyle: 'compressed'}))
+                .pipe(sass({outputStyle: 'compressed'})) // expanded
                 .pipe(gulp.dest('css'))
                 .pipe(browserSync.reload({stream: true}));
 });
