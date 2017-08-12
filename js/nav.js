@@ -1,7 +1,7 @@
 var navBar = $('.page-header nav'),
     navIcon = $('.nav-icon'),
     navLink = $('.menu a'),
-    posY = 70,
+    posY = 60,
 	breakPointMD = 768;
 
 $(window).scroll(function () {
@@ -10,6 +10,7 @@ $(window).scroll(function () {
     if (posW > posY) {
         navBar.css('background-color', 'rgba(0, 0, 0, .8)');
         navLink.css('color', '#F5F5F5');
+		
     } else {
         navBar.removeAttr('style');
         navLink.removeAttr('style');
