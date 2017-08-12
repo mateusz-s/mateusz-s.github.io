@@ -74,11 +74,17 @@
         </section><!-- ABOUT SECTION END -->
         <section id="portfolio" class="portfolio"><!-- PORTFOLIO SECTION START -->
             <div class="container">
-                <h2>Portfolio</h2>
+                <h2 class="portfolio-heading">Portfolio</h2>
+                <input id="all" type="radio" name="portfolio" checked>
+                <label for="all">Wszystko</label>
+                <input id="website" type="radio" name="portfolio">
+                <label for="website">Strony www</label>
+                <input id="web-app" type="radio" name="portfolio">
+                <label for="web-app">Aplikacje www</label>
                 <div class="row">
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-md-6 col-lg-4 all website">
                         <div class="portfolio-item">
-                            <div class="portfolio-img img-1">
+                            <div class="portfolio-img img-take">
                                 <div class="layer">
                                     <p>HTML5, CSS3, RWD, Sass</p>
                                 </div>
@@ -90,9 +96,9 @@
                             <a class="btn-square" href="https://drive.google.com/file/d/0B0kDmQE59vr0V25Vb1FLSUZIWjg/view" target="_blank" title="Pobierz szablon .PSD"><i class="fa fa-file-o" aria-hidden="true"></i></a>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-md-6 col-lg-4 all website">
                         <div class="portfolio-item">
-                            <div class="portfolio-img img-2">
+                            <div class="portfolio-img img-activebox">
                                 <div class="layer">
                                     <p>HTML5, CSS3, Sass, Bootstrap, JavaScript</p>
                                 </div>
@@ -104,9 +110,9 @@
                             <a class="btn-square" href="https://drive.google.com/file/d/0B0kDmQE59vr0U1J1MmNUTDlxRUU/view" target="_blank" title="Pobierz szablon .PSD"><i class="fa fa-file-o" aria-hidden="true"></i></a>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-md-6 col-lg-4 all website">
                         <div class="portfolio-item">
-                            <div class="portfolio-img img-3">
+                            <div class="portfolio-img img-elipsis">
                                 <div class="layer">
                                     <p>HTML5, CSS3, RWD, Sass, JavaScript</p>
                                 </div>
@@ -118,9 +124,9 @@
                             <a class="btn-square" href="https://drive.google.com/file/d/0B0kDmQE59vr0X00xZWNHVVY3OGM/view" target="_blank" title="Pobierz szablon .PSD"><i class="fa fa-file-o" aria-hidden="true"></i></a>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-md-6 col-lg-4 all web-app">
                         <div class="portfolio-item">
-                            <div class="portfolio-img img-4">
+                            <div class="portfolio-img img-quote-machine">
                                 <div class="layer">
                                     <p>HTML5, CSS3, JavaScript</p>
                                 </div>
@@ -131,9 +137,9 @@
                             <a class="btn-square" href="https://github.com/mateusz-s/random_quote_machine-js" target="_blank" title="Przegląd kodu"><i class="fa fa-code" aria-hidden="true"></i></a>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-md-6 col-lg-4 all web-app">
                         <div class="portfolio-item">
-                            <div class="portfolio-img img-5">
+                            <div class="portfolio-img img-country-browser">
                                 <div class="layer">
                                     <p>HTML5, CSS3, JavaScript</p>
                                 </div>
@@ -144,9 +150,9 @@
                             <a class="btn-square" href="https://github.com/mateusz-s/country_browser-js" target="_blank" title="Przegląd kodu"><i class="fa fa-code" aria-hidden="true"></i></a>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-md-6 col-lg-4 all web-app">
                         <div class="portfolio-item">
-                            <div class="portfolio-img img-6">
+                            <div class="portfolio-img img-kanban-board">
                                 <div class="layer">
                                     <p>HTML5, CSS3, RWD, Sass, JavaScript</p>
                                 </div>
@@ -189,7 +195,7 @@
         <p>Copyright 2017 <span class="visible-inline-block">&copy; <a class="link" href="https://github.com/mateusz-s/mateusz-s.github.io" target="_blank">Mateusz Smykowski</a></span></p> 
     </footer><!-- PAGE FOOTER END -->
     
-    <!-- SCRIPTS -->
+    <!-- JS SCRIPTS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/smooth-scrolling.js"></script>
     <script src="js/nav.js"></script>
