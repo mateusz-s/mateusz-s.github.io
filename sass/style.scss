@@ -111,14 +111,13 @@ h2 {
     font-size: 33px;
     text-transform: uppercase;
     letter-spacing: 2px;
-}
-
-h2::after {
-    content: '';
-    display: block;
-    width: 75px;
-    padding-bottom: 5px;
-    border-bottom: 2px solid $text-color-black;
+	&::after {
+		content: '';
+		display: block;
+		width: 75px;
+		padding-bottom: 5px;
+		border-bottom: 2px solid $text-color-black;
+	}
 }
 
 h3 {
@@ -145,7 +144,7 @@ strong, b {
 }
 
 /* === ADDITIONAL STYLES === */
-@each $work-name in take, activebox, elipsis, quote-machine, country-browser, kanban-board {
+@each $work-name in take, activebox, elipsis, quote-machine, country-browser, kanban-board, chuck-norris-jokes {
 	.img-#{$work-name} {
 		background-image: url('../img/#{$work-name}.jpg');
 	}
@@ -305,7 +304,7 @@ strong, b {
 
 [class*="col-"] {
     float: left;
-    width: 100%;
+    width: 100%; /* Mobile First */
     min-height: 1px;
     padding: 0 15px;
 }
